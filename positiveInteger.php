@@ -29,14 +29,14 @@ function positiveInteger(array $A) : int
 
         // we return the first positive integer that is not in our array
         else if($i !== $value) return $i;
-        
+
         $i++;
         $lastValue = $value;
     }
 
     return $i;
 }
-// @benzics
+// github.com/benzics
 echo positiveInteger([1, 2, 3]);
 // outputs 4
 echo positiveInteger([-1, -3]);
