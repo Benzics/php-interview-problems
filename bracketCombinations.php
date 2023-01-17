@@ -8,8 +8,8 @@
 // There are 5 total combinations when the input is 3, 
 // so your program should return 5.
 
-// after digging around I found the best solution to approach this problem
-// The Catalan formula: (2n!) / (n+1)! n!
+// We can use the Catalan formula: (2n!) / (n+1)! n! 
+// to solve this problem
 function BracketCombinations(int $num): int
 {
 
