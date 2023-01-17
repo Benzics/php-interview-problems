@@ -7,13 +7,17 @@
 // For example, The value of 0! is 1, 
 // according to the convention for an empty product." - Wikipedia
 
-function factorial($num){
+function factorial(int $num) : int
+{
     $res = 1;
   
-    // number has to be greater than 1 
+    // $num has to be greater than 1 before we multiply numbers
+    // less than or equal to $num
     // if not we return $res which is equal to 1
-    for(; $num > 1; $num--){
+    while($num > 1){
       $res *= $num;
+
+      $num--;
     }
   
     return $res;
@@ -21,3 +25,4 @@ function factorial($num){
 
 echo factorial(3);
 // output: 6
+// github.com/benzics
