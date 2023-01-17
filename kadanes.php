@@ -12,7 +12,6 @@ function kadane(array $items) : int
 {
     $maxSoFar = 0;
     $currentSum = 0;
-    $i = 0;
 
     foreach($items as $value)
     {
@@ -26,7 +25,6 @@ function kadane(array $items) : int
         // our sum so far should always be the maximum
         if($currentSum > $maxSoFar) $maxSoFar = $currentSum;
 
-        $i++;
     }
 
     return $maxSoFar;
