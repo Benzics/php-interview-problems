@@ -13,7 +13,7 @@ function isPalindrome(string $word) : bool
     // if the same we return true, else false
     return ($newWord === $word) ? true : false;
 }
-// @benzics
+// github.com/benzics
 
 function echoPalindrome(string $word) : void
 {

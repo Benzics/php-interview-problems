@@ -15,5 +15,5 @@ function lessOccurrence(array $items) : int
     // returns the first index which is the minimum
     return array_key_first($itemCount);
 }
-// @benzics
+// github.com/benzics
 echo lessOccurrence([1, 1, 2, 3, 3, 1, 2, 4, 5, 4, 6, 5, 7, 7]);
