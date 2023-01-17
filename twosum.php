@@ -29,7 +29,8 @@ function twosum(array $nums, int $target) : array
         {
             return [$indexedSums[$expected], $key];
         }
-        elseif(!isset($indexedSums[$value])) {
+        
+        if(!isset($indexedSums[$value])) {
             $indexedSums[$value] = $key;
         }
         
