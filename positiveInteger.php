@@ -12,34 +12,34 @@
 
 function positiveInteger(array $A) : int
 {
-    if(count($A) < 2) return 1;
-
-    // our array of positive integers
-    $positiveIntegers = [];
+    $positiveIntegers = []; // our array of positive integers
 
     foreach($A as $value) { 
         // we only want positive integers greater than 0
-        if($value < 1) continue;
-
-        // save this number to our array
-        $positiveIntegers[] = $value;
+        if($value > 0)  $positiveIntegers[] = $value;
     }
+   
+    sort($positiveIntegers);  // we sort our array from minimum to max
 
-    // we remove duplicate numbers from our array
-    array_unique($positiveIntegers);
-
-    // we sort our array from minimum to max
-    sort($positiveIntegers);
-
+    $lastValue = 0;
+    $i = 1;
     foreach($positiveIntegers as $value) {
 
-        // if current number + 1 is not in this array
-        // then this number is our minimum positive integer not in A
-        if(!array_search($value + 1, $positiveIntegers)) {
-            return $value + 1;
-        }
+        if($lastValue === $value) $i--; //we dont want repetitions
+
+        // we return the first positive integer that is not in our array
+        else if($i !== $value) return $i;
+        
+        $i++;
+        $lastValue = $value;
     }
 
-    return 1;
+    return $i;
 }
 // @benzics
+echo positiveInteger([1, 2, 3]);
+// outputs 4
+echo positiveInteger([-1, -3]);
+// outputs 1
+echo positiveInteger([1, 3, 6, 4, 1, 2]);
+// outputs 5
