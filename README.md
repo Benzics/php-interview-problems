@@ -9,3 +9,4 @@
 - Smallest positive integer
 - Least occurring number
 - Two Sum problem
+- Longest consecutive sequence
