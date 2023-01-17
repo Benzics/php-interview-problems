@@ -6,20 +6,20 @@
 
 function lessOccurence(array $items) : int
 {
-    sort($items);
+    // sort($items);
 
-    $itemCount = [];
+    $itemCount = array_count_values($items);
 
-    for($i = 0; $i < count($items); $i++) {
+    // for($i = 0; $i < count($items); $i++) {
 
-        if(!isset($itemCount[$items[$i]])) $itemCount[$items[$i]] = 1;
+    //     if(!isset($itemCount[$items[$i]])) $itemCount[$items[$i]] = 1;
 
-        if(isset($items[$i + 1]) && $items[$i + 1] === $items[$i]) {
-            $itemCount[$items[$i]]++;
-            continue;
-        }
+    //     if(isset($items[$i + 1]) && $items[$i + 1] === $items[$i]) {
+    //         $itemCount[$items[$i]]++;
+    //         continue;
+    //     }
 
-    }
+    // }
 
     $min = array_keys($itemCount, min($itemCount));
 
