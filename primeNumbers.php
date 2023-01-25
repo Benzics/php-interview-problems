@@ -15,7 +15,6 @@ function primeCheck(int $num) : bool
     // all other numbers are not primes
     return false;
 }
-// github.com/benzics
 
 function echoPrime(int $num) : void
 {
