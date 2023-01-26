@@ -25,8 +25,10 @@ echo BracketCombinations(3);
 function factorial($num){
   $res = 1;
 
-  for(; $num > 1; $num--){
+  while($num > 1){
     $res *= $num;
+
+    $num--;
   }
 
   return $res;
